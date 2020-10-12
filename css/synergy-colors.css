@@ -35,6 +35,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
+.content-sample {
+  padding: 20px;
+  opacity: 50%;
+}
 
 .color-primary {
   background-color: var(--color-primary);
