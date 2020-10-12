@@ -1,0 +1,77 @@
+
+:root {
+
+  /* primary color HSL */
+  --color-primary-h: 244;
+  --color-primary-s: 60%;
+  --color-primary-l: 50%;
+
+  /* dark100 HSL */
+  --color-dark100-h: 244;
+  --color-dark100-s: 58%;
+  --color-dark100-l: 21%;
+
+  /* define primary and dark color variable */
+  --color-primary: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 1.00);
+  --color-dark100: hsla(var(--color-dark100-h), var(--color-dark100-s), var(--color-dark100-l), 0.90);
+
+  /* generate more colors calculations */
+  --color-dark60: hsla(var(--color-dark100-h), calc(var(--color-dark100-s) - 5%), calc(var(--color-dark100-l) + 10%), 0.90);
+  --color-primary-light: hsla(calc(var(--color-primary-h) - 3), calc(var(--color-primary-s) - 4%), calc(var(--color-primary-l) + 14%), 1.00);
+  --color-primary-dark: hsla(calc(var(--color-primary-h) + 6), calc(var(--color-primary-s) - 2%), calc(var(--color-primary-l) - 14%), 1.00);
+  --color-primary-60: hsla(calc(var(--color-primary-h) - 1), calc(var(--color-primary-s) - 16%), 96%, 1.00);
+  --color-primary-40: hsla(calc(var(--color-primary-h) - 1), calc(var(--color-primary-s) - 12%), 98%, 1.00);
+  --color-primary-20: hsla(calc(var(--color-primary-h) - 1), calc(var(--color-primary-s) + 12%), 99%, 1.00);
+}
+/* End of root var */
+
+.ui-shell-grid {
+  padding: 80px;
+  height: 50vh;
+  min-height: 400px;
+  min-width: 900px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.color-primary {
+  background-color: var(--color-primary);
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.color-dark {
+  background-color: var(--color-dark100);
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.color-dark60 {
+  background-color: var(--color-dark60);
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.color-primarylight {
+  background-color: var(--color-primary-light);
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.color-primarydark {
+  background-color: var(--color-primary-dark);
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.color-primary60 {
+  background-color: var(--color-primary-60);
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.color-primary40 {
+  background-color: var(--color-primary-40);
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.color-primary20 {
+  background-color: var(--color-primary-20);
+  grid-area: 3 / 3 / 4 / 4;
+}
